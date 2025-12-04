@@ -1,8 +1,8 @@
-# Proyecto de datos (Idealista)
+# Proyecto de datos
 
 ## Descripción
 
-Proyecto de análisis de datos de viviendas a partir de un *scraper* de Idealista.
+Proyecto de análisis de datos de viviendas a partir de un *scraper* de *********.
 
 El objetivo es:
 - **Explorar** la muestra de viviendas (EDA).
@@ -57,7 +57,7 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 
 # 4) Registrar kernel de Jupyter
-python -m ipykernel install --user --name datos-idealista --display-name "Python (.venv) datos-idealista"
+python -m ipykernel install --user --name datos-********* --display-name "Python (.venv) datos-*********"
 ```
 
 ## Cómo usar los notebooks
@@ -66,7 +66,7 @@ python -m ipykernel install --user --name datos-idealista --display-name "Python
    - Lanzar JupyterLab (`jupyter lab`) o abrir el proyecto en VS Code / otra IDE.
 
 2. **Seleccionar el kernel correcto**  
-   - Al abrir cualquier `*.ipynb`, elegir el kernel: `Python (.venv) datos-idealista`.
+   - Al abrir cualquier `*.ipynb`, elegir el kernel: `Python (.venv) datos-*********`.
 
 3. **Orden recomendado de ejecución**  
    - `1. EDA/1. EDA.ipynb` - primera exploración y limpieza.
