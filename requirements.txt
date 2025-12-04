@@ -1,0 +1,29 @@
+# Núcleo Jupyter
+jupyter
+ipykernel
+notebook
+jupyterlab
+ipywidgets
+
+# Ciencia de datos
+numpy
+pandas
+scipy
+matplotlib
+seaborn
+scikit-learn
+statsmodels
+
+# E/S de datos
+openpyxl
+pyarrow
+
+# Web/Scraping (por si lo necesitas)
+requests
+beautifulsoup4
+lxml
+
+# Utilidades
+tqdm
+python-dotenv
+sqlalchemy
