@@ -12,6 +12,28 @@ The problem of access to housing is increasingly present in the political agenda
 
 For extraction, I performed ethical scraping of advertisement platforms. The initial objective was to capture the complete August 2024 supply (11,416 homes), but since this wasn't possible, I implemented random sampling using publication date as the ordering criterion.
 
+## Conclusions
+
+The descriptive analysis of the purchase-sale housing market in Madrid, based on a sample of 610 homes extracted in August 2024, reveals consistent patterns that I synthesize below. These conclusions should be interpreted considering the methodological limitations exposed: sampling is not strictly random, some segments have reduced representation, and data correspond to offer prices, not transaction prices.
+
+Words underlined in yellow are the names of key variables and values in our analysis and appear in this format throughout the entire report.
+
+Regarding location, the `center` concentrates the highest-priced homes in both `pee` and `pmc`, with more pronounced differences in `pmc` where 100% of `p90` is located in the `center`—a resounding fact that underlines the primacy of location as a determinant of market value. The median `pmc` in the `center` (~`9,000€/m²`) practically doubles that of `south` and `east` (~`4,000€/m²`-`5,000€/m²`). `North` and `west` occupy intermediate positions (~`6,000€/m²`-`7,000€/m²`).
+
+Regarding physical characteristics, I highlight three findings. First, `chalets` show inverse behavior depending on metric: high `pee` (absolute value) but low `pmc` (normalized price), confirming that their high total price responds to surface, not to premium valuation per square meter. Second, high floors (`6th-7th`) present the highest `pmc`, although floors `8th`+ descend—a result that could reflect heterogeneity in this segment or sampling limitations. Third, `interior` homes have lower `pee` but `pmc` similar to `exterior`, indicating that their lower total price is mainly due to size, not to a penalty per square meter.
+
+Regarding amenities, the `elevator` shows the clearest and most robust association with high price, in both `pee` and `pmc`. This variable probably functions as proxy for multiple correlated factors: building quality, age, central location. Leisure amenities (`garden`/`pool`) present inverse relationship with price, an effect that persists in `pmc` and confirms it's due to their concentration in lower-value peripheral zones, not to property size. `Air conditioning` has greater association with high price than `heating`, suggesting it functions as an indicator of property quality/modernity. `Balcony` shows greater association with high `pmc` than `terrace`, possibly due to its greater frequency in historic central buildings.
+
+In terms of variable hierarchy, location (`zone`/`subzone`) and `elevator` emerge as the strongest and most consistent price predictors in both metrics. Surface has positive relationship with `pee` (expected) and also with `pmc` (less obvious), although this second effect is probably mediated by correlation between size and location/quality. Leisure amenities (`garden`/`pool`) illustrate the risk of bivariate analysis: their negative association with price reflects geographical distribution, not causal effect. `Heating` presents weak or even inverse association with `pmc`, being of little use as predictor. Condition (`new`/`used`/`to_reform`) and `exterior`/`interior` condition have moderate effects on `pee` but limited on `pmc`, indicating they affect price mainly through size.
+
+Regarding limitations, the analysis is descriptive: it identifies patterns and associations that can guide hypotheses, but doesn't demonstrate causal relationships. Uncollected variables (building age, construction qualities, proximity to public transport, solar orientation) could nuance or modify some results. Some segments—peripheral districts, `new_construction`, floors `8th`+, `chalets`—have reduced samples (<50 observations) that limit conclusion robustness in those groups.
+
+Finally, data correspond to offer prices, not transaction prices. This can introduce bias if negotiation discounts vary systematically between segments—for example, if luxury homes have greater negotiation margin than economical ones. This limitation is inherent to real estate portal data and should be kept in mind when interpreting results.
+
+Despite these limitations, the analysis provides systematic characterization of the Madrid purchase-sale market that can serve as basis for deeper studies or as reference for future periodic analyses, the original project objective.
+
+
+
 ## Project Phases
 
 1. **Extraction**: Development of ethical scraper.
@@ -709,21 +731,3 @@ The `with/without` category (air without heating) presents the highest `pmc` (~9
 The proportion histogram shows clear segregation: `with/without` (air without heating) concentrates the highest proportion of homes in `p90`, while `without/with` (heating without air) dominates in `p10`. The `without/without` category presents more balanced distribution between percentiles. This pattern reinforces that `air conditioning` is a better predictor of high `pmc` than `heating`, consolidating as one of the amenity variables with greatest discriminating power along with `elevator`.
 
 ![pmc_equip_clima_percent_hist text](img/pmc_equip_clima_percent_hist.png)
-
-### Conclusions
-
-The descriptive analysis of the purchase-sale housing market in Madrid, based on a sample of 610 homes extracted in August 2024, reveals consistent patterns that I synthesize below. These conclusions should be interpreted considering the methodological limitations exposed: sampling is not strictly random, some segments have reduced representation, and data correspond to offer prices, not transaction prices.
-
-Regarding location, the `center` concentrates the highest-priced homes in both `pee` and `pmc`, with more pronounced differences in `pmc` where 100% of `p90` is located in the `center`—a resounding fact that underlines the primacy of location as a determinant of market value. The median `pmc` in the `center` (~`9,000€/m²`) practically doubles that of `south` and `east` (~`4,000€/m²`-`5,000€/m²`). `North` and `west` occupy intermediate positions (~`6,000€/m²`-`7,000€/m²`).
-
-Regarding physical characteristics, I highlight three findings. First, `chalets` show inverse behavior depending on metric: high `pee` (absolute value) but low `pmc` (normalized price), confirming that their high total price responds to surface, not to premium valuation per square meter. Second, high floors (`6th-7th`) present the highest `pmc`, although floors `8th`+ descend—a result that could reflect heterogeneity in this segment or sampling limitations. Third, `interior` homes have lower `pee` but `pmc` similar to `exterior`, indicating that their lower total price is mainly due to size, not to a penalty per square meter.
-
-Regarding amenities, the `elevator` shows the clearest and most robust association with high price, in both `pee` and `pmc`. This variable probably functions as proxy for multiple correlated factors: building quality, age, central location. Leisure amenities (`garden`/`pool`) present inverse relationship with price, an effect that persists in `pmc` and confirms it's due to their concentration in lower-value peripheral zones, not to property size. `Air conditioning` has greater association with high price than `heating`, suggesting it functions as an indicator of property quality/modernity. `Balcony` shows greater association with high `pmc` than `terrace`, possibly due to its greater frequency in historic central buildings.
-
-In terms of variable hierarchy, location (`zone`/`subzone`) and `elevator` emerge as the strongest and most consistent price predictors in both metrics. Surface has positive relationship with `pee` (expected) and also with `pmc` (less obvious), although this second effect is probably mediated by correlation between size and location/quality. Leisure amenities (`garden`/`pool`) illustrate the risk of bivariate analysis: their negative association with price reflects geographical distribution, not causal effect. `Heating` presents weak or even inverse association with `pmc`, being of little use as predictor. Condition (`new`/`used`/`to_reform`) and `exterior`/`interior` condition have moderate effects on `pee` but limited on `pmc`, indicating they affect price mainly through size.
-
-Regarding limitations, the analysis is descriptive: it identifies patterns and associations that can guide hypotheses, but doesn't demonstrate causal relationships. Uncollected variables (building age, construction qualities, proximity to public transport, solar orientation) could nuance or modify some results. Some segments—peripheral districts, `new_construction`, floors `8th`+, `chalets`—have reduced samples (<50 observations) that limit conclusion robustness in those groups.
-
-Finally, data correspond to offer prices, not transaction prices. This can introduce bias if negotiation discounts vary systematically between segments—for example, if luxury homes have greater negotiation margin than economical ones. This limitation is inherent to real estate portal data and should be kept in mind when interpreting results.
-
-Despite these limitations, the analysis provides systematic characterization of the Madrid purchase-sale market that can serve as basis for deeper studies or as reference for future periodic analyses, the original project objective.
